@@ -1,2 +1,5 @@
 ---
 
+- name: Ensure package is installed
+  apt:
+    name: lograte

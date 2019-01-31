@@ -1,6 +1,7 @@
 logrotate Role
 =========
 
+Logrotate is installed by default on Ubuntu 16.04, and is set up to handle the log rotation needs of all installed packages
 
 Role Variables
 --------------
