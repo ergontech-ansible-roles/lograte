@@ -1,5 +1,28 @@
 ---
 
-- name: Ensure package is installed
+- name: Ensure logrotate is installed
+  become: yes
   apt:
-    name: lograte
+    name: logrotate
+    state: present
+  tags:
+    - lograte
+
+- name: Configure logrotate defaults
+  become: yes
+  template:
+    src: defaults.conf.j2
+    dest: "{{ log_conf_location }}/defaults"
+  tags:
+    - lograte
+
+
+- name: Ensure logrotate configuration files are present
+  become: yes
+  template:
+    src: logFile.j2
+    dest: "{{ log_conf_location }}/{{ item.filename }}"
+  loop: "{{ logs }}"
+  when: logs
+  tags:
+    - lograte
