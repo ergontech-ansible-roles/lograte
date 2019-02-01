@@ -16,7 +16,7 @@ log_compress: compress
 logs: []
 
 # Sample log configuration
-logs
+logs:
   - filename: application
     path: /var/www/magento/shared/var/log
     rotate_options:
