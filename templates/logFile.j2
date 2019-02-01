@@ -1,19 +1,16 @@
+#jinja2: lstrip_blocks: True
 # {{ ansible_managed }}
 
-{% for log in logs %}
-    {{ log.filename }} {
-        {% if log.rotate_options is defined %}
-            {% for option in log.rotate_options %}
-                {{ option }}
+{{ item.path }} {
+    {% if item.rotate_options is defined %}
+            {% for option in item.rotate_options %}
+    {{ option }}
             {% endfor %}
         {% endif %}
-
-        {% if log.post_rotate is defined %}
-            postrotate
-            {% for option in log.post_rotate %}
-                {{ option }}
+        {% if item.post_rotate is defined %}
+    postrotate
+            {% for option in item.post_rotate %}
+        {{ option }}
             {% endfor %}
-
         {% endif %}
-    }
-{% endfor %}
+}

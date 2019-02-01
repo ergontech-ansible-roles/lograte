@@ -2,12 +2,15 @@
 
 # rotate log files weekly
 {{ log_rotate }}
-# use the syslog group by default, since this is the owning group
-# of /var/log/syslog.
+
+# use the syslog group by default, since this is the owning group of /var/log/syslog.
 {{ log_group }}
+
 # keep 4 weeks worth of backlogs
 {{ log_keep }}
+
 # create new (empty) log files after rotating old ones
 {{ log_create }}
+
 # log files compressed
 {{ log_compress }}

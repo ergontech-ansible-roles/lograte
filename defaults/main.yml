@@ -24,3 +24,9 @@ logs:
       - monthly
     post_rotate:
       - echo 'me'
+  - filename: blulb
+    path: /var/www/magento/shared/var/log
+    rotate_options:
+      - monthly
+      - two
+      - free dom
