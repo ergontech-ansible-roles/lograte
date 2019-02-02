@@ -12,7 +12,7 @@
   become: yes
   template:
     src: defaults.conf.j2
-    dest: "{{ log_conf_location }}/defaults"
+    dest: "{{ logrotate_conf_location }}/defaults"
   tags:
     - logrotate
 
@@ -21,8 +21,8 @@
   become: yes
   template:
     src: logFile.j2
-    dest: "{{ log_conf_location }}/{{ item.filename }}"
+    dest: "{{ logrotate_conf_location }}/{{ item.filename }}"
   loop: "{{ logs }}"
-  when: logs
+  when: logrotate_files
   tags:
     - logrotate

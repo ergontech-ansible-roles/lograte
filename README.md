@@ -7,16 +7,16 @@ This role will easily allow default configuration changes and individual log rot
 Role Variables
 --------------
 ```
-log_conf_location: /etc/logrotate.d
-log_rotate: weekly
-log_group: "su root syslog"
-log_keep: 4
-log_create: create
-log_compress: compress
+logrotateconf_location: /etc/logrotate.d
+logrotaterotate: weekly
+logrotategroup: "su root syslog"
+logrotatekeep: 4
+logrotatecreate: create
+logrotatecompress: compress
 logs: []
 
 # Sample log configuration
-logs:
+logrotate_files:
   - filename: application
     path: /var/www/magento/shared/var/log
     rotate_options:

@@ -2,19 +2,19 @@
 
 ### Default global configs
 
-log_conf_location: /etc/logrotate.d
+logrotate_conf_location: /etc/logrotate.d
 
 # rotate log files weekly
-log_rotate: weekly
+logrotate_rotate: weekly
 # use the syslog group by default, since this is the owning group
 # of /var/log/syslog.
-log_group: "su root syslog"
+logrotate_group: "su root syslog"
 # keep 4 weeks worth of backlogs
-log_keep: 4
+logrotate_keep: 4
 # create new (empty) log files after rotating old ones
-log_create: create
+logrotate_create: create
 # log files compressed
-log_compress: compress
+logrotate_compress: compress
 
 # Specific log rotation
-logs: []
+logrotate_files: []
