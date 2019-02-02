@@ -22,7 +22,7 @@
   template:
     src: logFile.j2
     dest: "{{ logrotate_conf_location }}/{{ item.filename }}"
-  loop: "{{ logs }}"
+  loop: "{{ logrotate_files }}"
   when: logrotate_files
   tags:
     - logrotate

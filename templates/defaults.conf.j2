@@ -1,16 +1,16 @@
 # {{ ansible_managed }}
 
 # rotate log files weekly
-{{ logrotaterotate }}
+{{ logrotate_rotate }}
 
 # use the syslog group by default, since this is the owning group of /var/log/syslog.
-{{ logrotategroup }}
+{{ logrotate_group }}
 
 # keep 4 weeks worth of backlogs
-{{ logrotatekeep }}
+{{ logrotate_keep }}
 
 # create new (empty) log files after rotating old ones
-{{ logrotatecreate }}
+{{ logrotate_create }}
 
 # log files compressed
-{{ logrotatecompress }}
+{{ logrotate_compress }}
