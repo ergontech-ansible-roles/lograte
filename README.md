@@ -7,13 +7,12 @@ This role will easily allow default configuration changes and individual log rot
 Role Variables
 --------------
 ```
-logrotateconf_location: /etc/logrotate.d
-logrotaterotate: weekly
-logrotategroup: "su root syslog"
-logrotatekeep: 4
-logrotatecreate: create
-logrotatecompress: compress
-logs: []
+logrotate_conf_location: /etc/logrotate.d
+logrotate_rotate: weekly
+logrotate_group: "su root syslog"
+logrotate_keep: 4
+logrotate_create: create
+logrotate_compress: compress
 
 # Sample log configuration
 logrotate_files:
