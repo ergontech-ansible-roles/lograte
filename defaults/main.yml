@@ -4,17 +4,5 @@
 
 logrotate_conf_location: /etc/logrotate.d
 
-# rotate log files weekly
-logrotate_rotate: weekly
-# use the syslog group by default, since this is the owning group
-# of /var/log/syslog.
-logrotate_group: "su root syslog"
-# keep 4 weeks worth of backlogs
-logrotate_keep: rotate 4
-# create new (empty) log files after rotating old ones
-logrotate_create: create
-# log files compressed
-logrotate_compress: compress
-
 # Specific log rotation
 logrotate_files: []

@@ -2,17 +2,12 @@ logrotate Role
 =========
 
 Logrotate is installed by default on Ubuntu 16.04, and is set up to handle the log rotation needs of all installed packages.
-This role will easily allow default configuration changes and individual log rotation file creation.
+This role will easily individual log rotation file creation.
 
 Role Variables
 --------------
 ```
 logrotate_conf_location: /etc/logrotate.d
-logrotate_rotate: weekly
-logrotate_group: "su root syslog"
-logrotate_keep: 4
-logrotate_create: create
-logrotate_compress: compress
 
 # Sample log configuration
 logrotate_files:
