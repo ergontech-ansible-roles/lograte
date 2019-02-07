@@ -10,7 +10,7 @@ logrotate_rotate: weekly
 # of /var/log/syslog.
 logrotate_group: "su root syslog"
 # keep 4 weeks worth of backlogs
-logrotate_keep: 4
+logrotate_keep: rotate 4
 # create new (empty) log files after rotating old ones
 logrotate_create: create
 # log files compressed

@@ -1,6 +1,23 @@
 #jinja2: lstrip_blocks: True
 # {{ ansible_managed }}
 
+# Overriding defaults
+
+# rotate log files weekly
+{{ logrotate_rotate }}
+
+# use the syslog group by default, since this is the owning group of /var/log/syslog.
+{{ logrotate_group }}
+
+# keep 4 weeks worth of backlogs
+{{ logrotate_keep }}
+
+# create new (empty) log files after rotating old ones
+{{ logrotate_create }}
+
+# log files compressed
+{{ logrotate_compress }}
+
 {{ item.path }} {
     {% if item.rotate_options is defined %}
             {% for option in item.rotate_options %}

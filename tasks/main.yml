@@ -8,14 +8,6 @@
   tags:
     - logrotate
 
-- name: Configure logrotate defaults
-  become: yes
-  template:
-    src: defaults.conf.j2
-    dest: "{{ logrotate_conf_location }}/defaults"
-  tags:
-    - logrotate
-
 # todo - we can easily override another logrotate file if we aren't careful with naming
 - name: Ensure logrotate configuration files are present
   become: yes
